@@ -9,6 +9,7 @@ $server->on('message', function($server, $frame) {
     print_r($frame);
     echo "received message: {$frame->data}\n";
     //$server->push($frame->fd, json_encode(["Hola", "todos"]));
+    //aaaaa
 
     foreach ($server->connections as $k){
         var_dump($k);
