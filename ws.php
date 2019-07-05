@@ -21,11 +21,11 @@ $server->on('message', function($server, $frame) {
     $user = 'root';
     $pwd = '123456abc';
     $pdo = new PDO('mysql:host=192.168.254.131;dbname=slowlog',$user,$pwd);
-	//$con = new mysqli('192.168.254.201',$user,$pwd,'charla');
+    //$con = new mysqli('192.168.254.201',$user,$pwd,'charla');
     $sql = "insert into charla(name,content,add_time,store_id) values('$name','$content','$time','$store_id')";
-	//$sql = "insert into charla(name,content,add_time,store_id) values ('$name','$content','$time','$store_id')";
+    //$sql = "insert into charla(name,content,add_time,store_id) values ('$name','$content','$time','$store_id')";
     $pdo->query($sql);
-	//mysqli_query($con,"set names 'utf8'");
+    //mysqli_query($con,"set names 'utf8'");
     //防乱码
     //$pdo->query('set names utf-8');
     //错误处理
